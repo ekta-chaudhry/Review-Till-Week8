@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.6/axios.min.js"></script>
+</head>
+
+<body>
+  <div id="posts"></div>
+  <script>
+    async function sendRequest() {
+      const res = await fetch("http://localhost:8080/cross", {
+        method: 'GET',
+        // headers: {
+        //     'Content-Type': 'application/x-www-form-urlencoded',
+        //     },
+        // body: 'key=value&flag=5'
+      });
+      const data = await res.json();
+      console.log(data);
+    }
+
+    sendRequest();
+  </script>
+</body>
+
+</html>
