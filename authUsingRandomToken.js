@@ -60,7 +60,7 @@ app.get('/me', (req, res, next) => {
             password: user.password
         })
     }else{
-        res.status(404).json({
+        res.status(401).json({
             message: 'Invalid token!'
         })
     }
