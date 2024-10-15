@@ -13,7 +13,7 @@ const userSchema = new Schema({
 })
 
 const todoSchema = new Schema({
-    userId: ObjectId,
+    userId: {type: ObjectId, ref: 'User'},
     title: String,
     done: Boolean
 })
